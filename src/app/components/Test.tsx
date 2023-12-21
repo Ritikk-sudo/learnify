@@ -22,7 +22,7 @@ function Test({ params }: any) {
           <div key={index}>
             {params.id === item.courseName ? (
               <div className="flex justify-between">
-                <div className="ml-28">
+                <div className="ml-28 mr-11">
                   <h1 className="text-3xl font-semibold text-blue-900">
                   Course Name : {item.courseName}
                   </h1>
