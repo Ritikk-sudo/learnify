@@ -32,7 +32,7 @@ function Header() {
               Demo
             </Link>
             <Link href="#" className="mr-5 hover:text-gray-900">
-              ContactUs
+              Contact
             </Link>
           </div>
         </nav>
