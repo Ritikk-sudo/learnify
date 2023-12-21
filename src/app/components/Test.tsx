@@ -13,31 +13,27 @@ function Test({ params }: any) {
 
   return (
     <div>
-      <div>
-
-      </div>
+      <div></div>
       {data.map((item, index) => {
         return (
-          
           <div key={index}>
             {params.id === item.courseName ? (
-              <div className="flex justify-between">
-                <div className="ml-28 mr-11">
-                  <h1 className="text-3xl font-semibold text-blue-900">
-                  Course Name : {item.courseName}
+              <div className="md:flex md:justify-between">
+                <div className="md:ml-28 ml-5 mr-11">
+                  <h1 className="md:text-3xl text-2xl font-semibold text-blue-900">
+                    Course Name : {item.courseName}
                   </h1>
-                  <h4 className="my-7 ml-4">
-                    {item.courseDesc}
-                  </h4>
+                  <h4 className="my-7 ml-4">{item.courseDesc}</h4>
                 </div>
-                <ReactPlayer
-                className="mr-14"
-                  url={item?.courseVideo}
-                  controls={true}
-                  width="50%"
-                  height="50%"
-                />
-               
+                <div className="flex md:block justify-center">
+                  <ReactPlayer
+                    className="md:mr-9"
+                    url={item?.courseVideo}
+                    controls={true}
+                    width="70%"
+                    height="70%"
+                  />
+                </div>
               </div>
             ) : null}
           </div>
@@ -48,4 +44,4 @@ function Test({ params }: any) {
 }
 
 // export default Test;
-export default dynamic (() => Promise.resolve(Test), {ssr: false})
+export default dynamic(() => Promise.resolve(Test), { ssr: false });
